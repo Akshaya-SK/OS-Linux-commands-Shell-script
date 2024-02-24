@@ -28,7 +28,7 @@ chanchal singhvi
 c.k. shukla
 s.n. dasgupta
 sumit chakrobarty
-^d
+
 ```
 cat > file2
 ```
@@ -37,7 +37,7 @@ barun sengupta
 c.k. shukla
 lalit chowdury
 s.n. dasgupta
-^d
+
 ```
 ### Display the content of the files
 cat < file1
@@ -47,7 +47,7 @@ chanchal singhvi
 c.k. shukla
 s.n. dasgupta
 sumit chakrobarty
-^d
+
 ```
 
 
@@ -58,7 +58,7 @@ chanchal singhvi
 c.k. shukla
 s.n. dasgupta
 sumit chakrobarty
-^d
+
 ```
 
 # Comparing Files
@@ -77,9 +77,9 @@ chanchal singhvi
 c.k. shukla
         lalit chowdury
                 s.n. dasgupta
-        ^d
+        
 sumit chakrobarty
-^d
+
 ```
  
 diff file1 file2
@@ -95,7 +95,7 @@ diff file1 file2
 +lalit chowdury
  s.n. dasgupta
 -sumit chakrobarty
- ^d
+ 
 ```
 
 #Filters
@@ -106,14 +106,14 @@ cat > file11
 ```
 Hello world
 This is my world
-^d
+
 ```
 cat > file22
 ```
 1001 | Ram | 10000 | HR
 1002 | tom |  5000 | Admin
 1003 | Joe |  7000 | Developer
-^d
+
 ```
 
 
@@ -122,7 +122,7 @@ cut -c1-3 file11
 ```
 Hel
 Thi
-^d
+
 ```
 
 cut -d "|" -f 1 file22
@@ -131,7 +131,7 @@ cut -d "|" -f 1 file22
 1001
 1002
 1003
-^d
+
 ```
 cut -d "|" -f 2 file22
 ## OUTPUT
@@ -139,13 +139,13 @@ cut -d "|" -f 2 file22
  Ram
  tom
  Joe
-^d
+
 ```
 cat < newfile 
 ```
 Hello world
 hello world
-^d
+
 ````
 cat > newfile 
 Hello world
@@ -166,7 +166,7 @@ grep -v hello newfile
 ## OUTPUT
 ```
 Hello world
-^d
+
 ```
 cat newfile | grep -i "hello"
 ## OUTPUT
@@ -228,7 +228,7 @@ hello world
 Linux is world number 1
 Unix is predecessor
 Linux is best in this World
-^d
+
 ```
 
 cat > newfile
@@ -238,7 +238,7 @@ hello world
 Linux is world number 1
 Unix is predecessor
 Linux is best in this World
-^d
+
  ```
 egrep -w 'Hello|hello' newfile 
 ## OUTPUT
@@ -335,7 +335,7 @@ cat > file23
 1004 | Sit |  7000 | Dev
 1003 | Joe |  7000 | Developer
 1001 | Ram | 10000 | HR
-^d
+
 ```
 
 
@@ -348,7 +348,7 @@ sed -n -e '3p' file23
 sed -n -e '$p' file23
 ## OUTPUT
 ```
-^d
+
 ```
 
 sed  -e 's/Ram/Sita/' file23
@@ -362,7 +362,7 @@ sed  -e 's/Ram/Sita/' file23
 1004 | Sit |  7000 | Dev
 1003 | Joe |  7000 | Developer
 1001 | Sita | 10000 | HR
-^d
+
 ```
 
 sed  -e '2s/Ram/Sita/' file23
@@ -376,7 +376,7 @@ sed  -e '2s/Ram/Sita/' file23
 1004 | Sit |  7000 | Dev
 1003 | Joe |  7000 | Developer
 1001 | Ram | 10000 | HR
-^d
+
 ```
 
 sed  '/tom/s/5000/6000/' file23
